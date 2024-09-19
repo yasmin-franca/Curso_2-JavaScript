@@ -24,6 +24,20 @@ console.log(lis);
 var paragrafo = document.getElementById('paragrafo');
 console.log(paragrafo);
 
+
 //class
 var itensDaLista = document.getElementsByClassName('item');
 console.log(itensDaLista);
+
+
+//querySelectorAll
+var itensClasse = document.getElementsByClassName('item');
+console.log(itensClasse);
+
+var itensQuery = document.querySelectorAll('#lista2 li');
+console.log(itensQuery);
+
+
+//querySelector
+var lista = document.querySelector('#lista');
+console.log(lista);
