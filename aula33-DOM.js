@@ -12,6 +12,7 @@ Acessar o DOM é semelhante as regras de CSS
 Podemos acessar por: tags, ids, classes.....
  */
 
+//SELECIONAR ELEMENTOS
 //tag
 var tit = document.getElementsByTagName('h1')[0];
 console.log(tit);
@@ -41,3 +42,38 @@ console.log(itensQuery);
 //querySelector
 var lista = document.querySelector('#lista');
 console.log(lista);
+
+
+//ALTERAR CONTEÚDO
+//1º selecionar o elemento
+var title = document.querySelector("#title");
+
+//innerHTML
+title.innerHTML = "Testando o texto alterado!";
+
+//textContent -> mais utilizado, recomendado e performático
+var subtitle = document.querySelector(".subtitle");
+subtitle.textContent = "Testando o textContent";
+
+
+//CRIAR ELEMENTOS
+//createElement
+//inserir no body
+var novoParagrafo = document.createElement("p");
+var texto = document.createTextNode("Este é o conteúdo do paragráfo criado");
+novoParagrafo.appendChild(texto);
+console.log(novoParagrafo);
+
+var body = document.querySelector("body");
+console.log(body);
+body.appendChild(novoParagrafo);
+
+//inserir em um container
+var container = document.getElementById("container");
+console.log(container);
+
+var el = document.createElement("span");
+el.appendChild(document.createTextNode("texto do span"));
+console.log(el);
+
+container.appendChild(el);
